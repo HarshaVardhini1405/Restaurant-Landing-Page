@@ -25,6 +25,7 @@ nav a {
   margin: 0 15px;
   font-weight: bold;
   font-size: 16px;
+  transition: color 0.3s ease;
 }
 
 nav a:hover {
@@ -35,10 +36,16 @@ nav a:hover {
 header, section {
   padding: 50px;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.85); /* Black background with slight transparency */
+  background-color: rgba(0, 0, 0, 0.85);
   margin: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+header:hover, section:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
 .menu-items {
@@ -53,9 +60,15 @@ header, section {
   border: 1px solid #555;
   border-radius: 8px;
   padding: 10px;
-  background-color: #1a1a1a; /* dark card */
+  background-color: #1a1a1a;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   color: #eee;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-item:hover {
+  transform: scale(1.05) translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
 }
 
 .menu-item img {
@@ -70,10 +83,12 @@ button {
   padding: 10px 15px;
   border-radius: 5px;
   cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
 }
 
 button:hover {
   background-color: #4e342e;
+  transform: scale(1.1);
 }
 
 form input {
@@ -103,3 +118,4 @@ form {
     width: 90%;
   }
 }
+
