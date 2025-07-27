@@ -1,0 +1,105 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  background-image: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1600&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #fff;
+}
+
+nav {
+  background-color: #3e2723;
+  padding: 15px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav a {
+  color: #ffe0b2;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  color: #fff3e0;
+}
+
+header, section {
+  padding: 50px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.85); /* Black background with slight transparency */
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.menu-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.menu-item {
+  width: 220px;
+  border: 1px solid #555;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #1a1a1a; /* dark card */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  color: #eee;
+}
+
+.menu-item img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+button {
+  background-color: #6d4c41;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #4e342e;
+}
+
+form input {
+  padding: 10px;
+  margin: 5px;
+  width: 200px;
+  background-color: #222;
+  color: white;
+  border: 1px solid #555;
+}
+
+form {
+  margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+  .menu-items {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu-item {
+    width: 90%;
+  }
+
+  form input {
+    width: 90%;
+  }
+}
