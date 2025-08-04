@@ -2,86 +2,119 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Healthy Cafe</title>
+  <title>Spice Garden </title>
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
-
   <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About Us</a>
-    <a href="#menu">Menu</a>
-    <a href="#reservation">Reservation</a>
-    <a href="#blog">Blog</a>
-    <a href="#contact">Contact</a>
+    <ul>
+      <li><a href="#" onclick="showPage('loginPage')">Login</a></li>
+      <li><a href="#" onclick="showPage('menuPage')">Menu</a></li>
+      <li><a href="#" onclick="showPage('contactPage')">Contact Us</a></li>
+      <li><a href="#" onclick="showPage('aboutPage')">About Us</a></li>
+      <li><a href="#" onclick="showPage('blogPage')">Blog</a></li>
+    </ul>
   </nav>
 
-  <section id="about">
-    <h2>About Us</h2>
-    <p>At Royale Blossom, we believe in healthy, fresh, and delicious food that brings joy to every meal. Our chefs use only the finest ingredients to craft dishes you'll love.</p>
-  </section>
+  <div id="homePage">
+    <h1>Spice Garden</h1>
+    <p>Authentic Indian Flavors Delivered Fresh</p>
+    <button id="reserveTableBtn" onclick="showPage('bookingPage')">Reserve Table</button>
+  </div>
 
-  <header id="home">
-    <h1>Welcome to Royale Blossom Restaurant</h1>
-    <p>Delicious food served fresh every day!</p>
-  </header>
-
-  <section id="menu">
-    <h2>Our Menu</h2>
-    <div class="menu-items">
-      <div class="menu-item">
-        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=250&q=80" alt="Grilled Steak" />
-        <h3>Grilled Steak</h3>
-        <p>Juicy grilled steak with garlic butter and herbs.</p>
-        <button>Order Now</button>
-      </div>
-      <div class="menu-item">
-        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=250&q=80" alt="Fresh Salad" />
-        <h3>Fresh Garden Salad</h3>
-        <p>Mixed greens with cherry tomatoes, cucumbers, and vinaigrette.</p>
-        <button>Order Now</button>
-      </div>
-      <div class="menu-item">
-        <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=250&q=80" alt="Cup of Coffee" />
-        <h3>Classic Coffee</h3>
-        <p>Rich and smooth brewed coffee, perfect to start your day.</p>
-        <button>Order Now</button>
-      </div>
-      <div class="menu-item">
-        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=250&q=80" alt="Cappuccino" />
-        <h3>Cappuccino</h3>
-        <p>Espresso topped with foamy steamed milk and a sprinkle of cocoa.</p>
-        <button>Order Now</button>
-      </div>
-    </div>
-  </section>
-
-  <section id="reservation">
-    <h2>Table Reservation</h2>
-    <p>Book your table in advance to ensure a delightful dining experience!</p>
-    <form>
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <input type="date" required />
-      <input type="time" required />
-      <br />
-      <button type="submit">Reserve Now</button>
+  <div id="loginPage" class="section">
+    <h2>Login to Continue</h2>
+    <form class="form-box">
+      <label for="username">Username</label><br />
+      <input type="text" id="username" placeholder="Username" required /><br />
+      <label for="password">Password</label><br />
+      <input type="password" id="password" placeholder="Password" required /><br />
+      <button type="submit">Login</button><br />
+      <button type="button" onclick="showPage('homePage')">Back to Home</button>
     </form>
-  </section>
+  </div>
 
-  <section id="blog">
-    <h2>From Our Blog</h2>
-    <p>Stay updated with healthy tips, new recipes, and behind-the-scenes stories from our kitchen.</p>
-    <button onclick="alert('Redirecting to full blog...')">Read More</button>
-  </section>
+  <div id="menuPage" class="section">
+    <h2>our menu</h2>
+    <ul id="menuList">
+      <li onclick="toggleSelection(this)">
+        <img src="https://th.bing.com/th/id/OIP.M5P3yI6QSzcItNnqOMVz4gHaLG?w=126&h=189&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" />
+       chicken biryani
+      </li>
+      <li onclick="toggleSelection(this)">
+        <img src="https://th.bing.com/th/id/OIP.Q78xWuZVBLyP9kUsfc-IsQHaKX?w=208&h=291&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" />
+        avacado toast
+      </li>
+      <li onclick="toggleSelection(this)">
+        <img src="https://th.bing.com/th/id/OIP.RJBUy65JqPDWHUy8iOhWjAHaEK?w=311&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" />
+        Veg mandi
+      </li>
+      <li onclick="toggleSelection(this)">
+        <img src="https://th.bing.com/th/id/OIP.UiRBlaKpHzfziJcecuDRsAHaEt?w=269&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" />
+        chilli chiken
+      </li>
+      <li onclick="toggleSelection(this)">
+        <img src="https://th.bing.com/th/id/OIP.NVVXifAAuWo1W_6mP7WE_wHaJQ?w=208&h=260&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" />
+        naan
+      </li>
+      <li onclick="toggleSelection(this)">
+        <img src="https://th.bing.com/th/id/OIP.TR6gVZG-S4YxWTyGXxAHiwHaFk?w=257&h=193&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" />
+        Gulab Jamun
+      </li>
+    </ul>
+    <button onclick="submitOrder()">Submit Order</button><br />
+    <button type="button" onclick="showPage('homePage')">Back to Home</button>
+  </div>
 
-  <section id="contact">
+  <div id="bookingPage" class="section">
+    <h2>Table Booking</h2>
+    <form onsubmit="submitBooking(event)">
+      <input type="text" placeholder="Name" required /><br />
+      <input type="email" placeholder="Email" required /><br />
+      <input type="tel" placeholder="Phone Number" required /><br />
+      <input type="date" required /><br />
+      <input type="time" required /><br />
+      <button type="submit">Book Table</button><br />
+      <button type="button" onclick="showPage('homePage')">Back to Home</button>
+    </form>
+  </div>
+
+  <div id="contactPage" class="section">
     <h2>Contact Us</h2>
-    <p>Email: contact@restaurant.com</p>
-    <p>Phone: (123) 456-7890</p>
-  </section>
+    <form>
+      <input type="text" placeholder="Your Name" required /><br />
+      <input type="email" placeholder="Your Email" required /><br />
+      <textarea placeholder="Your Message" rows="4" required></textarea><br />
+      <button type="submit">Send</button><br />
+      <button type="button" onclick="showPage('homePage')">Back to Home</button>
+    </form>
+  </div>
 
+  <div id="aboutPage" class="section">
+    <h2>About Us</h2>
+    <p>At Spice Garden, we take pride in serving authentic Indian dishes inspired by traditional recipes and rich cultural heritage.</p>
+    <button type="button" onclick="showPage('homePage')">Back to Home</button>
+  </div>
+
+  <div id="blogPage" class="section">
+    <h2>Our Blog</h2>
+    <p>Discover recipes, behind-the-scenes kitchen stories, and more in our culinary blog.</p>
+    <button type="button" onclick="showPage('homePage')">Back to Home</button>
+  </div>
+
+  <div class="social-section">
+    <p>Follow us on</p>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
+
 
